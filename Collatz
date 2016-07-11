@@ -5,8 +5,14 @@ def collatz (n):
 		else:
 			return ((n * 3) + 1)
 
-n2 = input()
 
-while (n2 != 1) :
-	n2 = collatz(int(n2))
-	print(int(n2))
+n2 = input()
+while (n2 != 1)  :
+	
+	try:										
+		n2 = collatz(int(n2))
+		print(int(n2))
+	except ValueError:
+		print ("Please insert a number")
+		n2 = input()
+		continue
