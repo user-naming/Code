@@ -1,0 +1,12 @@
+
+def collatz (n):
+		if ((n % 2) == 0):
+			return (n / 2)
+		else:
+			return ((n * 3) + 1)
+
+n2 = input()
+
+while (n2 != 1) :
+	n2 = collatz(int(n2))
+	print(int(n2))
